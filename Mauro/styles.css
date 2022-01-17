@@ -1,0 +1,160 @@
+body {
+  width: 100vw;
+  justify-content: center;
+}
+
+/* ---------------------------------font------------------- */
+@font-face {
+  font-family: 'EffraBold';
+  src: url("https://static.nos.nl/fonts/effra/EffraBold.woff?v=prod-app") format('woff');
+}
+
+h2 {
+  font-family: 'EffraBold';
+  line-height: 1;
+  /*rare default lettertype correctie*/
+}
+
+p {
+  font-family: 'HelveticaNeue';
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* -----------------------image+zoom------------ */
+img {
+  border-radius: 1%;
+  transition: 0.3s transform;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* ----------------------------------- */
+ul li:not(aside ul li) {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1em;
+}
+
+section ul li img {
+  width: 100%;
+  height: 30em;
+}
+
+section ul li div {
+  overflow: hidden;
+}
+
+/*--------------------------first section------*/
+section:first-of-type li p {
+  display: none;
+}
+
+section:first-of-type li {
+  align-items: flex-end;
+}
+
+section:first-of-type li h2 {
+  position: absolute;
+  margin-bottom: 5px;
+}
+
+section:first-of-type h2 {
+  color: white;
+  font-size: 1.75rem;
+}
+
+/* -----------------second------------------ */
+section:nth-of-type(2) {
+  display: block;
+}
+
+section:nth-of-type(2) ul {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+section:nth-of-type(2) ul div img, div {
+  height: 15em;
+  width: 100%;
+}
+
+section:nth-of-type(2) li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+section:nth-of-type(2) h2 {
+  font-size: 18px;
+}
+
+section:nth-of-type(2) p {
+  margin-top: 0;
+  font-size: 16px;
+  color: #666666;
+}
+
+/* ----------------side ------------------------------------ */
+aside {
+  width: 20%;
+  height: auto;
+  /*---height auto op deze en aside om te fixen---*/
+  padding: 0 10px;
+  margin: 0 15px;
+  float: right;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 8px 0px;
+}
+
+aside h2 {
+  font-family: 'EffraBold';
+  font-size: 1.25rem;
+  color: rgb(230, 30, 20);
+  justify-content: center;
+}
+
+aside span {
+  font-family: 'HelveticaNeue';
+  font-size: 1rem;
+  color: #222222;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+aside li a {
+  display: inherit;
+  flex-direction: column;
+  margin: 1em;
+}
+
+aside ul li:nth-child(even){
+  width: 100%;
+  height: 2px;
+  background-color: #EEEEEE;
+}
+
+time {
+  font-style: 0.75rem;
+  color: #888888;
+  font-family: HelveticaNeue;
+}
+
+video{
+height: auto;
+width: 100%;
+}
